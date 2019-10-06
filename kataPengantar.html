@@ -1,73 +1,85 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>KATA PENGANTAR</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-		*{
-		{box-sizing: border-box;}
-		
-	header {
-		background-color: #666;
-		font-family: calibri;
-		padding: 30px;
-		text-align: center;
-		font-size: 100%;
-		color: white;
-	}
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
 nav {
   float: left;
   width: 30%;
-  height: 300px;
+  height: 300px; /* only for demonstration, should be removed */
   background: #ccc;
   padding: 20px;
 }
 
+/* Style the list inside the menu */
 nav ul {
   list-style-type: none;
   padding: 0;
 }
- 
- 	article {
+
+article {
   float: left;
   padding: 20px;
   width: 70%;
   background-color: #f1f1f1;
-  height: 300px; 
-  
- }
- section: after
- {
- 	content: "";
- 	display: table;
- 	clear: both;
- }
+  height: 300px; /* only for demonstration, should be removed */
+}
 
- footer {
- 	background-color: #777;
- 	padding: 100px;
- 	text-align: center;
- 	color:white;
- 	font-size: 200%
- }
- @media (max-width: 100px) {
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
   nav, article {
     width: 100%;
     height: auto;
   }
 }
 </style>
-</head>	
+</head>
 <body>
-<h1 style="font-family: calibri; font-size: 200%;"><center>KATA PENGANTAR</h1>	
+
+<h2>Kata Pengantar</h2>
+
 <header>
-<h2> ini adalah sebuah awalan untuk sebuah katapengantar</h2>
+  <h4>Ini adalah sebuah awalan untuk Kata Pengantar</h4>
 </header>
 
 <section>
-	<nav>
-		<ul>
+  <nav>
+   		 <ul>
 			<li><a href ="bio.html">link biodata</a>
 			</li>
 			<li><a href =https://www.youtube.com/watch?v=zndvqTc4P9I>link mv youtube</a>
@@ -76,9 +88,10 @@ nav ul {
 		</ul>
 
 <img src="image/kjkjk.png" align="left"width="100" height="150">
-	</nav>
-<article>
-	<p>Saya adalah seorang mahasiswa universitas tanjungpura dengan jurusan teknik informatika dan sedang menempuh semester yang ke 5.</p>
+  </nav>
+  
+  <article>
+    <p>Saya adalah seorang mahasiswa universitas tanjungpura dengan jurusan teknik informatika dan sedang menempuh semester yang ke 5.</p>
 <p> disini saya membuat sesuatu html yang berisi tentang hal yang sangat tidak ada faedah bagi kalian karena ini hanya biodata singkat saya 
 <mark>untuk lebih menegetahui bio saya, tekan saja <sup>link</sup> disamping dan juga ada link mv favorit saya disamping</mark>
 <br>
@@ -86,17 +99,16 @@ klik panah dibawah untuk ke laman biodata
 <br>
 <a href="bio.html"><img src="image/panah.png" style="margin-left: 10px" height="50" width="50"></a>
 </p>
-
-</article>	
+  </article>
 </section>
 
-
 <footer>
-<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Check Waktu</button>
+  <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Check Waktu</button>
         <p id="demo"><p>
 <p>	
 Sekian dan terima kasih	
-</p>
+</p>	
 </footer>
+
 </body>
 </html>
